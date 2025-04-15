@@ -3,71 +3,73 @@ const userModel = require('../schema/userModel');
 const Bill = require("../schema/billModel");
 const Stock = require("../schema/StockSchema")
 
+
+
 // Sign-Up
 router.post('/Sign-Up', async (req, res) => {
-    try {
-        const { name, email, password } = req.body;
-        const user = await userModel.findOne({ email: email });
+  try {
+      const { name, email, password } = req.body;
+      const user = await userModel.findOne({ email: email });
 
-        if (user) {
-            return res.status(400).send("User already exists");
-        }
+      if (user) {
+          return res.status(400).send("User already exists");
+      }
 
-        const newUser = new userModel({
-            name: name,
-            email: email,
-            password: password
-        });
+      const newUser = new userModel({
+          name: name,
+          email: email,
+          password: password
+      });
 
-        const newBill = new Bill({
-            userEmail: email,
-            Your: 0,
-            items: []
-        });
+      const newBill = new Bill({
+          userEmail: email,
+          Your: 0,
+          items: []
+      });
 
-        const newStock = new Stock({
-          userEmail : email,
-          stock : []
-        })
+      const newStock = new Stock({
+        userEmail : email,
+        stock : []
+      })
 
-        
-        
-        await newUser.save();
-        await newBill.save();
-        await newStock.save();
-        return res.status(201).send("User registered successfully");
+      
+      
+      await newUser.save();
+      await newBill.save();
+      await newStock.save();
+      return res.status(201).send("User registered successfully");
 
-    } catch (err) {
-        console.error("Error in user.js Sign-Up", err);
-        return res.status(500).send("Internal Server Error");
-    }
+  } catch (err) {
+      console.error("Error in user.js Sign-Up", err);
+      return res.status(500).send("Internal Server Error");
+  }
 });
 
 
 router.post("/Login", async (req, res) => {
-    try {
-        const { email, password } = req.body;
+  try {
+      const { email, password } = req.body;
 
-        const user = await userModel.findOne({ email: email });
+      const user = await userModel.findOne({ email: email });
 
-        if (!user) {
-            return res.status(404).json({ message: "User doesn't exist" });
-        }
-        if (user.password !== password) {
-            return res.status(400).json({ message: "Incorrect credentials" });
-        }
+      if (!user) {
+          return res.status(404).json({ message: "User doesn't exist" });
+      }
+      if (user.password !== password) {
+          return res.status(400).json({ message: "Incorrect credentials" });
+      }
 
-        // Return user details including the shop name
-        return res.status(200).json({
-            message: "Login successful",
-            shopName: user.name, 
-            email: user.email
-        });
+      // Return user details including the shop name
+      return res.status(200).json({
+          message: "Login successful",
+          shopName: user.name, 
+          email: user.email
+      });
 
-    } catch (err) {
-        console.error("Error in user.js Login", err);
-        return res.status(500).json({ message: "Internal Server Error" });
-    }
+  } catch (err) {
+      console.error("Error in user.js Login", err);
+      return res.status(500).json({ message: "Internal Server Error" });
+  }
 });
 
 

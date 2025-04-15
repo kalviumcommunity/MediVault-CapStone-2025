@@ -37,3 +37,54 @@ The project will be completed within a span of six weeks, with each phase focusi
 - **Final Phase:** Testing the system thoroughly, refining the UI/UX, and making necessary optimizations before deployment.  
 
 This structured approach ensures steady progress and allows for testing and refinements at each stage. By the end of the development period, the system will be fully functional, addressing the core problems faced in medical inventory management. Additional features or improvements can be made based on feedback and real-world testing.  
+
+
+
+
+
+# GET All Users API
+
+**Endpoint:**  
+`GET /api/all`
+
+**File Path:**  
+`Backend/src/route/user.js`
+
+## Description
+This API endpoint retrieves and returns data for all registered users in the database. It is intended for administrative purposes or for displaying a list of users in the frontend interface.
+
+
+
+
+
+
+
+
+# POST User APIs
+
+**File Path:**  
+`Backend/src/route/user.js`
+
+This document describes the two POST API endpoints related to user authentication:
+
+---
+
+## 1. Sign-Up API
+
+**Endpoint:**  
+`POST /api/Sign-Up`
+
+### Description
+Registers a new user by storing their credentials and account information in the database.
+
+
+## 2. Login API
+
+**Endpoint:**  
+`POST /api/Login`
+
+### Description
+Data is sent to the backend, backend verifies the data with the database.
+
+
+
