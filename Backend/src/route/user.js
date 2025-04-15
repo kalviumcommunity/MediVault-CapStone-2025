@@ -84,13 +84,13 @@ router.delete("/d", async (req, res) => {
 
 
 router.get("/all", async (req, res) => {
-    try {
-        const users = await userModel.find();
-        return res.status(200).send(users);
-    } catch (err) {
-        console.error("Error in user.js get", err);
-        return res.status(500).send("Internal Server Error");
-    }
+  try {
+      const users = await userModel.find();
+      return res.status(200).send(users);
+  } catch (err) {
+      console.error("Error in user.js get", err);
+      return res.status(500).send("Internal Server Error");
+  }
 });
 
 
