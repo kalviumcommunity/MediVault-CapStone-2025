@@ -88,3 +88,22 @@ Data is sent to the backend, backend verifies the data with the database.
 
 
 
+
+
+
+
+
+# PUT Update Stock API
+
+**Endpoint:**  
+`PUT /api-stock/create`
+
+**File Path:**  
+`Backend/src/route/stock.js`
+
+## Description
+This API endpoint updates the stock for a specific user by adding new items to the user's existing stock. It requires the user's email and an array of stock items to be provided in the request body.
+
+
+
+
