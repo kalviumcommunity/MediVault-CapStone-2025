@@ -108,3 +108,7 @@ This API endpoint updates the stock for a specific user by adding new items to t
 
 
 
+# Deployed Backend Server 
+
+**Render Link is been Deployed here :- **
+https://medivault-capstone-2025.onrender.com
