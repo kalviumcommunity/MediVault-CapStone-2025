@@ -93,6 +93,7 @@ Data is sent to the backend, backend verifies the data with the database.
 
 
 
+
 # PUT Update Stock API
 
 **Endpoint:**  
