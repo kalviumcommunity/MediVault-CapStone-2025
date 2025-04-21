@@ -112,3 +112,25 @@ This API endpoint updates the stock for a specific user by adding new items to t
 
 **Render Link is been Deployed here:**
 https://medivault-capstone-2025.onrender.com
+
+
+
+
+
+
+
+
+
+
+
+# Database schema created
+
+
+
+**File Path:**  
+`Backend/src/schema/StockSchema.js`
+`Backend/src/schema/billModel.js`
+`Backend/src/schema/userModel.js`
+
+## Description
+In this assignment we have created 3 schemas one for the user creaditial other 2 for stock and bills respectively in Backend folder.
