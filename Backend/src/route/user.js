@@ -5,6 +5,7 @@ const Stock = require("../schema/StockSchema")
 
 
 
+
 // Sign-Up
 router.post('/Sign-Up', async (req, res) => {
   try {
@@ -83,6 +84,7 @@ router.delete("/d", async (req, res) => {
         return res.status(500).send("Internal Server Error");
     }
 });
+
 
 
 router.get("/all", async (req, res) => {
