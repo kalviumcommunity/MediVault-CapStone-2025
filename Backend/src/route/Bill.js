@@ -35,7 +35,7 @@ router.put("/create", async (req, res) => {
       res.status(500).json({ message: "Internal Server Error" });
     }
   });
-// Route to get all bills for a specific user
+
 router.get("/all", async (req, res) => {
     const { userEmail } = req.query;
     try {
