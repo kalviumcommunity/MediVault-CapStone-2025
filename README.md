@@ -155,3 +155,18 @@ In this assignment we have reading and writing in MOngoDB database using api cal
 
 Get api call :- we are using the get for retriving all the data in the database
 Post api call :- we are using the post api call for adding the user credetials to the database
+
+
+
+
+
+# Database Read and Write
+
+**Vecels Link:**  
+`https://cap-stone-2025.vercel.app/`
+
+
+## Description
+In this assignment we have to deploy our frontend in netlify or vercels.
+
+ 
