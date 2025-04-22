@@ -169,4 +169,17 @@ Post api call :- we are using the post api call for adding the user credetials t
 ## Description
 In this assignment we have to deploy our frontend in netlify or vercels.
 
+
+
+
+
+# Creating frontend component in react
+
+**File Path:**  
+`Frontend/src/components`
+
+
+## Description
+In this assignment we have to create frontend components like login page, home page etc. In components folder I have css, jsx, redux, privateRoute. I have completed my frontend part of this assignment
+
  
